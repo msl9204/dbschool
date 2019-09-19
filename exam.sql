@@ -9,4 +9,4 @@ INSERT INTO movies VALUES (6, "Disney's Up", 2009);
  
  
 SELECT * from movies;
-SELECT * from movies where release_year >= 2000 order by release_year
+SELECT * from movies where release_year >= 2000 order by release_year;
