@@ -1,4 +1,4 @@
-CREATE TABLE movies (id INTEGER PRIMARY KEY, name TEXT, release_year INTEGER);
+CREATE TABLE movies (id INTEGER PRIMARY KEY, name VARCHAR2(20), release_year INTEGER);
 
 INSERT INTO movies VALUES (1, "Avatar", 2009);
 INSERT INTO movies VALUES (2, "Titanic", 1997);
