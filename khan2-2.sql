@@ -2,7 +2,7 @@ CREATE SEQUENCE tmp_seq START WITH 1 INCREMENT BY 1 MAXVALUE 100 CYCLE NOCACHE;
 CREATE SEQUENCE tmp_seq2 START WITH 1 INCREMENT BY 1 MAXVALUE 100 CYCLE NOCACHE;
 
 CREATE TABLE artists (
-    id number(100) PRIMARY KEY,
+    id number(20) PRIMARY KEY,
     name VARCHAR2(50),
     country VARCHAR2(50),
     genre VARCHAR2(50));
@@ -33,7 +33,7 @@ INSERT INTO artists (id, name, country, genre)
     VALUES (tmp_seq.NEXTVAL, 'Bob Marley', 'Jamaica', 'Reggae');
 
 CREATE TABLE songs (
-    id number(100) PRIMARY KEY,
+    id number(20) PRIMARY KEY,
     artist VARCHAR2(50),
     title VARCHAR2(50));
 
