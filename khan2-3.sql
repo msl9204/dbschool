@@ -53,6 +53,8 @@ SELECT author, total_words FROM
 (SELECT author, SUM(words) AS total_words FROM books GROUP BY author)
 WHERE total_words >= 1000000;
  
- 
- 
+
+SELECT author, avg_words FROM
+(SELECT, author, AVG(words) AS avg_words FROM books GROUP BY author)
+WHERE avg_words >= 150000; 
  
