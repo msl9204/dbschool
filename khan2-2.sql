@@ -8,7 +8,7 @@ CREATE TABLE artists (
     genre VARCHAR2(50));
 
 INSERT INTO artists (id, name, country, genre)
-    VALUES (tmp_seq, 'Taylor Swift', 'US', 'Pop');
+    VALUES (tmp_seq.NEXTVAL, 'Taylor Swift', 'US', 'Pop');
 INSERT INTO artists (id, name, country, genre)
     VALUES (tmp_seq.NEXTVAL, 'Led Zeppelin', 'US', 'Hard rock');
 INSERT INTO artists (id, name, country, genre)
@@ -38,7 +38,7 @@ CREATE TABLE songs (
     title VARCHAR2(50));
 
 INSERT INTO songs (id, artist, title)
-    VALUES (tmp_seq2, 'Taylor Swift', 'Shake it off');
+    VALUES (tmp_seq2.NEXTVAL, 'Taylor Swift', 'Shake it off');
 INSERT INTO songs (id, artist, title)
     VALUES (tmp_seq2.NEXTVAL, 'Rihanna', 'Stay');
 INSERT INTO songs (id, artist, title)
