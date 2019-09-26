@@ -1,10 +1,10 @@
-DELETE SEQUENCE tmp_seq;
-DELETE SEQUENCE tmp_seq2;
+DROP SEQUENCE tmp_seq;
+DROP SEQUENCE tmp_seq2;
 
 CREATE SEQUENCE tmp_seq START WITH 0 INCREMENT BY 1 MINVALUE 0 MAXVALUE 100 CYCLE NOCACHE;
 CREATE SEQUENCE tmp_seq2 START WITH 0 INCREMENT BY 1 MINVALUE 0 MAXVALUE 100 CYCLE NOCACHE;
 
-DELETE TABLE artists;
+DROP TABLE artists;
 
 CREATE TABLE artists (
     id number(20) PRIMARY KEY,
@@ -38,7 +38,7 @@ INSERT INTO artists (id, name, country, genre)
     VALUES (tmp_seq.NEXTVAL, 'Bob Marley', 'Jamaica', 'Reggae');
 
                    
-DELETE TABLE songs;
+DROP TABLE songs;
                    
 CREATE TABLE songs (
     id number(20) PRIMARY KEY,
