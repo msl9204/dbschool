@@ -1,4 +1,4 @@
-CREATE TABLE todo_list (id INTEGER PRIMARY KEY, item TEXT, minutes INTEGER);
+CREATE TABLE todo_list (id INTEGER PRIMARY KEY, item VARCHAR2(50), minutes INTEGER);
 
 INSERT INTO todo_list VALUES (1, "Wash the dishes", 15);
 INSERT INTO todo_list VALUES (2, "vacuuming", 20);
