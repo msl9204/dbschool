@@ -29,7 +29,7 @@ SELECT COUNT(*),
         WHEN number_grade > 70 THEN 'C'
         ELSE 'F'
     END AS letter_grade
-FROM (SELECT COUNT(*), letter_grade FROM student_grades GROUP BY letter_grade)    
+FROM (SELECT COUNT(*), letter_grade FROM student_grades GROUP BY letter_grade); 
 
 DROP SEQUENCE id_seq;
 DROP TABLE student_grades;
