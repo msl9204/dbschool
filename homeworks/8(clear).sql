@@ -1,5 +1,5 @@
-CREATE SEQUENCE id_seq start with 1 increment by 1 minvalue 0 nocache;
-CREATE SEQUENCE id_seq2 start with 1 increment by 1 minvalue 0 nocache;
+CREATE SEQUENCE id_seq start with 0 increment by 1 minvalue 0 nocache;
+CREATE SEQUENCE id_seq2 start with 0 increment by 1 minvalue 0 nocache;
 
 CREATE TABLE persons (
     id INTEGER PRIMARY KEY,
