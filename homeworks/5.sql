@@ -70,9 +70,6 @@ SELECT name FROM artists WHERE genre = 'Pop';
 SELECT title FROM songs WHERE artist IN (SELECT name FROM artists WHERE genre = 'Pop');
 
                    
-SELECT * FROM ARTISTS;                  
-                   
-                   
 DROP SEQUENCE tmp_seq;
 DROP SEQUENCE tmp_seq2;
 
