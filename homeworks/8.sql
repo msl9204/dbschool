@@ -3,7 +3,7 @@ CREATE SEQUENCE id_seq2 start with 1 increment by 1 minvalue 0 nocache;
 
 CREATE TABLE persons (
     id INTEGER PRIMARY KEY,
-    name TEXT,
+    name VARCHAR2(50),
     age INTEGER);
     
 INSERT INTO persons (id, name, age) VALUES (id_seq.NEXTVAL, 'Bobby McBobbyFace', 12);
@@ -16,7 +16,7 @@ INSERT INTO persons (id, name, age) VALUES (id_seq.NEXTVAL, 'Lee MS', 28);
 CREATE table hobbies (
     id INTEGER PRIMARY KEY,
     person_id INTEGER,
-    name TEXT);
+    name VARCHAR2(50));
     
 INSERT INTO hobbies (id, person_id, name) VALUES (id_seq2.NEXTVAL, 1, 'drawing');
 INSERT INTO hobbies (id, person_id, name) VALUES (id_seq2.NEXTVAL, 1, 'coding');
