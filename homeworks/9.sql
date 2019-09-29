@@ -28,7 +28,7 @@ SELECT customers.name, customers.email, orders.item, orders.price FROM customers
     LEFT OUTER JOIN orders
     ON customers.id = orders.customer_id;
     
-SELECT customers.name, customers.email, SUM(orders.price) AS SUM FROM customers ,
+SELECT customers.name, customers.email, SUM(orders.price) AS SUM FROM customers , orders, 
         (SELECT customers.name, customers.email, SUM(orders.price) AS SUM FROM customers
          LEFT OUTER JOIN orders
          ON customers.id = orders.customer_id
