@@ -48,3 +48,12 @@ SELECT a.fullname, b.fullname FROM friends
     ON friends.person1_id = a.id
     JOIN persons AS b
     ON friends.person2_id = b.id
+
+DROP SEQUENCE id_seq;                 
+DROP SEQUENCE id_seq2;                  
+DROP SEQUENCE id_seq3;
+                 
+DROP TABLE persons;
+DROP TABLE hobbies;
+DROP TABLE friends;
+                 
