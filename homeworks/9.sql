@@ -33,6 +33,7 @@ SELECT customers.name, customers.email, SUM(orders.price) AS SUM FROM
     LEFT OUTER JOIN orders
     ON customers.id = orders.customer_id
     GROUP BY customers.name), LEFT OUTER JOIN orders
+    ON customers.id = orders.customer_id                   
     ORDER BY SUM DESC;
                    
 DROP SEQUENCE id_seq;
