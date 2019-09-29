@@ -23,8 +23,6 @@ INSERT INTO orders (id, customer_id, item, price)
 INSERT INTO orders (id, customer_id, item, price)
     VALUES (id_seq2.NEXTVAL, 1, 'TARDIS', 1000000.00);
     
-SELECT customers.name, item, price from customers inner join orders on customers.id=orders.customer_id;
-    
 
 SELECT customers.name, customers.email, orders.item, orders.price FROM customers
     LEFT OUTER JOIN orders
