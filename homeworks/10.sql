@@ -23,3 +23,5 @@ INSERT INTO movies
 SELECT movies.title, sequel.title AS Sequel_title FROM movies
     LEFT OUTER JOIN movies sequel
     ON movies.sequel_id = sequel.id;
+
+DROP TABLE movies;
