@@ -2,8 +2,8 @@ CREATE SEQUENCE id_seq start with 1 increment by 1 minvalue 0 nocache;
 
 CREATE TABLE clothes (
     id INTEGER PRIMARY KEY,
-    type TEXT,
-    design TEXT);
+    type VARCHAR2(50),
+    design VARCHAR2(50));
     
 INSERT INTO clothes (id, type, design)
     VALUES (id_seq.NEXTVAL, 'dress', 'pink polka dots');
