@@ -22,7 +22,7 @@ UPDATE clothes SET price = 30 WHERE id=3;
 
 SELECT * FROM clothes;
 
-INSERT INTO clothes (type, design, price) VALUES ('shoes', 'high-hill', 40);
+INSERT INTO clothes (id, type, design, price) VALUES (id_seq.NEXTVAL, 'shoes', 'high-hill', 40);
 
 SELECT * FROM clothes;
 
