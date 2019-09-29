@@ -1,3 +1,5 @@
+DROP TABLE moives;
+
 CREATE TABLE movies (id INTEGER PRIMARY KEY, name VARCHAR(50), release_year INTEGER);
 
 INSERT INTO movies VALUES (1, "Avatar", 2009);
@@ -10,3 +12,5 @@ INSERT INTO movies VALUES (6, "Disney's Up", 2009);
  
 SELECT * from movies;
 SELECT * from movies where release_year >= 2000 order by release_year
+
+DROP TABLE movies;
