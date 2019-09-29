@@ -1,5 +1,5 @@
 CREATE TABLE movies (id INTEGER PRIMARY KEY,
-    title VARCHAR2(50),
+    title VARCHAR2(70),
     released INTEGER,
     sequel_id INTEGER);
 
