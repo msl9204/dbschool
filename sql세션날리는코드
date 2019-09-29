@@ -1,0 +1,16 @@
+sqlplus "/as sysdba"로 들어가서
+
+
+SELECT A.SID, A.SERIAL#
+  FROM V$SESSION A, V$LOCK B, DBA_OBJECTS C
+  WHERE A.SID = B.SID
+  AND B.ID1 = C.OBJECT_ID
+  AND B.TYPE = 'TM'
+  AND C.OBJECT_NAME = '테이블명';
+
+
+ALTER SYSTEM KILL SESSION '세션아이디, 시리얼넘버';
+
+
+세션이랑 시리얼 찾아서 날리면됨
+
