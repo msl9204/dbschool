@@ -43,7 +43,7 @@ INSERT INTO books (id, author, title, words)
     
     
 -- SELECT author, SUM(words) AS total_words FROM books GROUP BY author HAVING total_words >= 1000000;
--- 오라클에서는 한문장안에 ALLIAS로 바로 호출하지 못함.
+-- 오라클에서는 한문장안에 ALIAS로 바로 호출하지 못함.
 -- SELECT author, AVG(words) AS avg_words FROM books GROUP BY author HAVING avg_words >= 150000;
  
 SELECT author, total_words FROM
