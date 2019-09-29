@@ -26,3 +26,6 @@ SELECT * FROM documents;
 DELETE FROM documents WHERE title LIKE 'Things I''m Afraid Of';
 
 SELECT * FROM documents;
+                    
+DROP TABLE documents;
+DROP SEQUENCE id_seq;
