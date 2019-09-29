@@ -37,8 +37,6 @@ INSERT INTO artists (id, name, country, genre)
     VALUES (tmp_seq.NEXTVAL, 'Bob Marley', 'Jamaica', 'Reggae');
 
                    
-DROP TABLE songs;
-                   
 CREATE TABLE songs (
     id number(20) PRIMARY KEY,
     artist VARCHAR2(50),
