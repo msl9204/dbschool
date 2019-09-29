@@ -1,21 +1,24 @@
+CREATE SEQUENCE id_seq start with 1 increment by 1 minvalue 0 nocache;
+
+
 CREATE TABLE student_grades (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    name TEXT,
+    id INTEGER PRIMARY KEY,
+    name VARCHAR2(30),
     number_grade INTEGER,
     fraction_completed REAL);
     
-INSERT INTO student_grades (name, number_grade, fraction_completed)
-    VALUES ("Winston", 90, 0.805);
-INSERT INTO student_grades (name, number_grade, fraction_completed)
-    VALUES ("Winnefer", 95, 0.901);
-INSERT INTO student_grades (name, number_grade, fraction_completed)
-    VALUES ("Winsteen", 85, 0.906);
-INSERT INTO student_grades (name, number_grade, fraction_completed)
-    VALUES ("Wincifer", 66, 0.7054);
-INSERT INTO student_grades (name, number_grade, fraction_completed)
-    VALUES ("Winster", 76, 0.5013);
-INSERT INTO student_grades (name, number_grade, fraction_completed)
-    VALUES ("Winstonia", 82, 0.9045);
+INSERT INTO student_grades (id_seq, name, number_grade, fraction_completed)
+    VALUES (id_seq.NEXTVAL, "Winston", 90, 0.805);
+INSERT INTO student_grades (id_seq, name, number_grade, fraction_completed)
+    VALUES (id_seq.NEXTVAL, "Winnefer", 95, 0.901);
+INSERT INTO student_grades (id_seq, name, number_grade, fraction_completed)
+    VALUES (id_seq.NEXTVAL, "Winsteen", 85, 0.906);
+INSERT INTO student_grades (id_seq, name, number_grade, fraction_completed)
+    VALUES (id_seq.NEXTVAL, "Wincifer", 66, 0.7054);
+INSERT INTO student_grades (id_seq, name, number_grade, fraction_completed)
+    VALUES (id_seq.NEXTVAL, "Winster", 76, 0.5013);
+INSERT INTO student_grades (id_seq, name, number_grade, fraction_completed)
+    VALUES (id_seq.NEXTVAL, "Winstonia", 82, 0.9045);
 
 SELECT name, number_grade, ROUND(fraction_completed*100) AS percent_completed FROM student_grades;
 
@@ -28,3 +31,6 @@ SELECT COUNT(*),
     END AS letter_grade
 FROM student_grades
 GROUP BY letter_grade;
+
+DROP SEQUENCE id_seq;
+DROP TABLE student_grades;
