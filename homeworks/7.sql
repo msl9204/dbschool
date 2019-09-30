@@ -36,7 +36,7 @@ GROUP BY
         WHEN number_grade > 80 THEN 'B'
         WHEN number_grade > 70 THEN 'C'
         ELSE 'F'
-    END AS letter_grade;
+    END;
     
     
     
