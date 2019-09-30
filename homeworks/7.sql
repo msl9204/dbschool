@@ -7,17 +7,17 @@ CREATE TABLE student_grades (
     number_grade INTEGER,
     fraction_completed REAL);
     
-INSERT INTO student_grades (id_seq, name, number_grade, fraction_completed)
+INSERT INTO student_grades (id, name, number_grade, fraction_completed)
     VALUES (id_seq.NEXTVAL, 'Winston', 90, 0.805);
-INSERT INTO student_grades (id_seq, name, number_grade, fraction_completed)
+INSERT INTO student_grades (id, name, number_grade, fraction_completed)
     VALUES (id_seq.NEXTVAL, 'Winnefer', 95, 0.901);
-INSERT INTO student_grades (id_seq, name, number_grade, fraction_completed)
+INSERT INTO student_grades (id, name, number_grade, fraction_completed)
     VALUES (id_seq.NEXTVAL, 'Winsteen', 85, 0.906);
-INSERT INTO student_grades (id_seq, name, number_grade, fraction_completed)
+INSERT INTO student_grades (id, name, number_grade, fraction_completed)
     VALUES (id_seq.NEXTVAL, 'Wincifer', 66, 0.7054);
-INSERT INTO student_grades (id_seq, name, number_grade, fraction_completed)
+INSERT INTO student_grades (id, name, number_grade, fraction_completed)
     VALUES (id_seq.NEXTVAL, 'Winster', 76, 0.5013);
-INSERT INTO student_grades (id_seq, name, number_grade, fraction_completed)
+INSERT INTO student_grades (id, name, number_grade, fraction_completed)
     VALUES (id_seq.NEXTVAL, 'Winstonia', 82, 0.9045);
 
 SELECT name, number_grade, ROUND(fraction_completed*100) AS percent_completed FROM student_grades;
