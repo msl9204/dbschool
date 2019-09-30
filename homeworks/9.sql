@@ -17,11 +17,11 @@ CREATE TABLE orders (
     price REAL);
 
 INSERT INTO orders (id, customer_id, item, price)
-    VALUES (id_seq2.NEXTNAL, 1, 'Sonic Screwdriver', 1000.00);
+    VALUES (id_seq2.NEXTVAL, 1, 'Sonic Screwdriver', 1000.00);
 INSERT INTO orders (id, customer_id, item, price)
-    VALUES (id_seq2.NEXTNAL, 2, 'High Quality Broomstick', 40.00);
+    VALUES (id_seq2.NEXTVAL, 2, 'High Quality Broomstick', 40.00);
 INSERT INTO orders (id, customer_id, item, price)
-    VALUES (id_seq2.NEXTNAL, 1, 'TARDIS', 1000000.00);
+    VALUES (id_seq2.NEXTVAL, 1, 'TARDIS', 1000000.00);
     
 SELECT customers.name, item, price from customers inner join orders on customers.id=orders.customer_id;
     
