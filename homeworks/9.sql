@@ -30,11 +30,20 @@ SELECT customers.name, customers.email, orders.item, orders.price FROM customers
     LEFT OUTER JOIN orders
     ON customers.id = orders.customer_id;
     
-SELECT customers.name, customers.email, SUM(orders.price) AS SUM FROM customers
-    LEFT OUTER JOIN orders
-    ON customers.id = orders.customer_id
-    GROUP BY customers.name
-    ORDER BY SUM DESC;
+-- SELECT customers.name, customers.email, SUM(orders.price) AS SUM FROM customers
+--     LEFT OUTER JOIN orders
+--     ON customers.id = orders.customer_id
+--     GROUP BY customers.name
+--     ORDER BY SUM DESC;
+                   
+SELECT name, email, SUM(price)
+FROM customers
+LEFT OUTER JOIN orders on customers.id = order
+GROUP BY name, email order by SUM(price) desc;
+                   
+                   
+                   
+                   
                    
 DROP SEQUENCE id_seq;
 DROP SEQUENCE id_seq2;
