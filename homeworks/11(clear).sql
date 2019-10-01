@@ -48,6 +48,8 @@ SELECT a.fullname, b.fullname FROM friends
     ON friends.person1_id = a.id
     JOIN persons AS b
     ON friends.person2_id = b.id
+                 
+select l.fullname, r.fullname from persons l, persons r, friends where l.id =person1_id and r.id=person2_id;
 
 DROP SEQUENCE id_seq;                 
 DROP SEQUENCE id_seq2;                  
