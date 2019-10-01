@@ -38,7 +38,7 @@ SELECT customers.name, customers.email, orders.item, orders.price FROM customers
                    
 SELECT name, email, SUM(price)
 FROM customers
-LEFT OUTER JOIN orders on customers.id = order
+LEFT OUTER JOIN orders on customers.id = order.customer_id
 GROUP BY name, email order by SUM(price) desc null last;
                    
                    
