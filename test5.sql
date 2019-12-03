@@ -1,7 +1,7 @@
 set serveroutput on
 set verify off
 variable e_name varchar2(30)
-accept emp_no prompt "employee number??"
+accept emp_no prompt '찾고자 하는 종업원번호는??'
 declare
        v_empno number(4);
        v_ename emp.ename%type;
