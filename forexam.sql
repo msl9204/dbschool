@@ -1,12 +1,9 @@
+set verify off
 set serveroutput on
 
 accept salary_info prompt '월급을 입력해주세요'
 
-begin
+prompt 연간 연봉은 &salary_info
 
-dbms_output.put_line(salary_info);
 
-end;
-/
-
-set serveroutput off
+set verify on
