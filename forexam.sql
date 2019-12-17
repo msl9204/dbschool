@@ -1,11 +1,15 @@
+set serveroutput OFF;
 set serveroutput ON;
 
 DECLARE
-    cnt integer;
+    empNo number(20);
+    empName varchar2(10);
 BEGIN
-    cnt := cnt + 1;
-    if cnt is null then
-        dbms_output.put_line('결과는 : cnt는 NULL입니다.');
-    end if;
+    select employee_id, first_name into empNo, empName
+    from Employees
+    where employee_id = 124;
+
+    dbms_output.put_line(empNo || ' ' || empName);
+
 END;
 /
