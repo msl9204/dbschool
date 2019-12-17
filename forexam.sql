@@ -5,5 +5,6 @@ BEGIN
         DBMS_OUTPUT.PUT_LINE('값은 10이다.');
     ELSE
         DBMS_OUTPUT.PUT_LINE('값은 10이 아니다.');
+    END IF;
 END;
 /
