@@ -1,15 +1,9 @@
-set serveroutput OFF;
-set serveroutput ON;
-
 DECLARE
-    empNo number(20);
-    empName varchar2(10);
+    var NUMBER;
 BEGIN
-    select employee_id, first_name into empNo, empName
-    from Employees
-    where employee_id = 124;
-
-    dbms_output.put_line(empNo || ' ' || empName);
-
+    var := 10;
+    DBMS_OUTPUT.PUT_LINE(var);
+    var := var + 10;
+    DBMS_OUTPUT.PUT_LINE(var);
 END;
 /
