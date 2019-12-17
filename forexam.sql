@@ -1,4 +1,3 @@
-set serveroutput OFF;
 set serveroutput ON;
 
 DECLARE
